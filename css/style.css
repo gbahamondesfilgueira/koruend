@@ -1,0 +1,991 @@
+
+body{
+    background-image: url("../img/fondo-turquesa-claro.jpg");
+    background-repeat:repeat-x;
+    background-size:cover;
+    margin: 0;
+}
+/*inicio del css del logo*/
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    width: 242px;
+
+}
+/*fin del css del logo*/
+/*inicio del slider*/
+
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+.container-all-slider img {
+    max-width: 100%;
+    height: 450px;
+}
+.container-all-slider{
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 450px;
+}
+.slider{
+    display: flex;
+    transform: translate3d(0,0,0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 20s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.item-slider{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow:0;
+    max-width: 100%;
+    height: 634px;
+    width: 100%;
+
+}
+
+
+.pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+
+
+}
+.pagination-item:hover{
+    transform: scale(2);
+
+}
+.pagination-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+
+}
+.pagination-item:hover img{
+    opacity: 0;
+    transform: scale(1);
+
+}
+ input[id="1"]:checked ~ .slider{
+     animation:none;
+     transform: translate3d(0,0,0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: #ffff;
+}
+
+input[id="2"]:checked ~ .slider{
+    animation:none;
+    transform: translate3d(calc(-100% * 1),0,0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+   background: #ffff;
+}
+input[id="3"]:checked ~ .slider{
+    animation:none;
+    transform: translate3d(calc(-100% * 2),0,0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+   background: #ffff;
+}
+input[id="4"]:checked ~ .slider{
+    animation:none;
+    transform: translate3d(calc(-100% * 3),0,0);
+}
+
+input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
+   background: #ffff;
+}
+
+@keyframes autoplay {
+    25%{
+        transform: translate3d(calc(-70% * 0) , 0 , 0);
+    }
+    50%{
+        transform: translate3d(calc(-100% * 1) , 0 , 0);
+    }
+    75%{
+        transform: translate3d(calc(-100% * 2) , 0 , 0);
+    }
+    100%{
+        transform: translate3d(calc(-100% * 3) , 0 , 0);
+    }
+}
+/*fin del slider*/
+
+/*inicio del box nosotros*/
+.box_nosotros_container{
+    margin: 22px 0 17px 0;
+}
+
+.box_nosotros_container h2{
+    position: relative;
+    width: 400px;
+    color: black;
+    left: 260px;
+    top: 17px;
+}
+.box_nosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box_nosotros img{
+    width: 200px;
+    height: 175px;
+}
+
+.nosotros_desc{
+    width: 50%;
+    margin-left: 30px;
+}
+.nosotros_desc h3{
+    color: black;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.nosotros_desc p{
+    color: black;
+    font-size: 17px;
+    margin-top: -4px;
+}
+
+
+/*fin del box nosotros*/
+
+/*inicio del menu conceptual*/
+
+.box_description_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.box_description{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.acordeon_img{
+    height: 200px;
+
+}
+.acordeon_img img {
+    height: 100%;
+    width: 100%;
+}
+
+.acordeon{
+    width: 33%;
+}
+.acordeon input{
+    display: none;
+}
+.acordeon__titulo{
+    display: block;
+    padding: 15px;
+    background: #5c388c;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #ffff;
+}
+
+.acordeon__titulo:hover{
+    background:#5c388c6e;
+
+}
+
+.acordeon__contenido{
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.5s;
+    display: block;
+    width: 100%;
+}
+.acordeon__contenido li{
+    margin-top:10px ;
+
+}
+
+.acordeon__contenido h4{
+    color: white;
+}
+
+.acordeon input:checked ~ .acordeon__contenido{
+    height: auto;
+    margin-top: 15px;
+    width: 100%;
+}
+.box_description .acordeon a
+{
+    cursor: pointer;;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.box_description .acordeon ul{
+    list-style: none;
+}
+.box_description .acordeon ul a .icon-minus{
+    font-size: 11px;
+    margin-right: 20px;
+}
+.box_description .acordeon a:hover{
+    color: #ffff;
+}
+
+/*fin menu conceptual*/
+
+
+/*Aqui comienza la caja horario de atencion*/
+
+.horario_de_atencion_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.horario_de_atencion{
+    width: 100%;
+    height: 82px;
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+    align-items: center;
+}
+
+.horario_de_atencion .horario{
+    height: auto;
+    text-align: center;
+    color: black;
+    font-size: 19px;
+}
+
+.horario_de_atencion .horario p{
+    margin-top: 0;
+}
+
+.contacto_whatsapp i{
+    margin-right: 20px;
+}
+
+.contacto_whatsapp a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+.contacto_phone a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.contacto_phone i{
+    margin-right: 20px;
+    color: white;
+    font-size: 26px;
+}
+
+/*Aqui termina la caja de horario de atencion*/
+
+/*aqui comienza nuestros especialistas*/
+
+.box_especialistas{
+    text-align: center;
+    margin: 36px 0 30px 0;
+
+}
+.box_especialista__desc{
+    display: flex;
+    justify-content: center;
+}
+
+.box_especialistas img {
+    width: 200px;
+    height: 250px;
+
+}
+.box_especialista_img_desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 282px;
+}
+.box_des_especialista{
+    width: 50%;
+    border: 1px solid black;
+}
+
+.box_des_especialista h4{
+    padding: 10px;
+    text-align: initial;
+    color:black ;
+}
+.box_des_especialista p{
+
+    
+    font-size: 20px;
+    color: black;
+    text-align: initial;
+    margin-left: 30px;
+}  
+
+.box_especialistas h3{
+    color: black;
+    font-size: 28px;
+}
+
+/*aqui termina especialista*/
+
+/*aqio comienza el footer */
+.contactos_derechos_reservaos{
+    width: 100%;
+    background: #d9d9d938;
+}
+
+.footer_contacto_programa{
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+
+.footer_contacto_programa ul{
+    list-style: none;
+    margin-top: 30px;
+}
+.footer_contacto_programa li{
+    margin-top: 20px;
+}
+
+.footer_programa li a{
+    cursor: pointer;
+
+}
+.footer_contacto_programa li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer_contacto h3{
+    text-align: center;
+    font-size: 25px;
+}
+.footer_programa h3{
+    text-align: center;
+    font-size: 25px;
+}
+
+.footer_contacto p{
+    border: 1px solid white;
+    margin: 6px;
+    width: 78px;
+}
+
+.divisor_footer{
+    display: flex;
+    justify-content: center;
+}
+.divisor_footer p{
+    border: 1px solid black;
+    width: 75%;
+    text-align: center;
+
+}
+.todos_los_derechos_redes_sociales{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.derechos{
+    color: black;
+}
+.redes_sociales_footer ul{
+    display: flex;
+    list-style: none;
+}
+.redes_sociales_footer .icon-facebook, .icon-whatsapp, .icon-instagram{
+    color: white;
+    font-size: 30px;
+
+}
+
+.redes_sociales_footer a{
+    text-decoration: none;
+}
+/*termina el footer*/
+
+/*aqui comienza el boton de redes sociales */
+.container{
+    display: block;
+}
+#btn-mas{
+        display: none;
+}
+.container{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+}
+.redes a, .icon-plus{
+        display: block;
+        text-decoration: none;
+        background-color:  #5c388c;
+        color:#fff;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50px;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+        transform: all 500ms ease;
+        transition: all 250ms ease-in-out 0s;
+        content: "";    
+}
+.redes a:hover{
+        background: #fff;
+        color: #cc2b2b;
+}
+.redes a{
+        margin-bottom: -15px;
+        opacity: 0;
+        visibility: hidden;
+}
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+    
+}
+.icon-plus{
+        cursor: pointer;
+        background:  #5c388c;
+        font-size: 23px;
+    
+}
+#btn-mas:checked ~ .btn-mas .icon-plus{
+        transform: rotate(130deg);
+        font-size: 25px;
+}
+.icon-plus-contactanos{
+        top: 88%;
+        color: rgb(255, 255, 255);
+        right: 60px;
+        margin: 0px;
+        padding: 5px 15px;
+        z-index: 1;
+        position: absolute;
+        font-size: 12px;
+        transform: translateY(-50%);
+        background:  #5c388c;
+        text-align: end;
+        transition: all 0.1s ease-out 0s;
+        font-family: unset;
+        line-height: initial;
+        white-space: nowrap;
+        border-radius: 3px;
+}
+ #btn-mas:checked ~ .icon-plus-contactanos{
+        opacity: 1;
+        visibility: hidden;
+}
+
+.icon-plus{
+    color: #ffff;
+}
+
+/* aqui termina el boton de redes sociales fijo*/
+
+
+
+/*css de las imagenes sobrepuestas  */
+
+.imgenes_mostrar{
+    height: 100vh;
+    width: 100vw;
+    background-color: #c5c5c5b3;
+    display: none;
+    position: fixed;
+    top: 1px;
+    z-index: 1;
+    
+}
+.ocultar{
+    display: flex;
+    justify-content: end;
+}
+.ocultar h3{
+    margin-right: 40px;
+    cursor: pointer;
+    color: black;
+}
+.imagen-terapias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.imagen-terapias img{
+    width: 350px;
+    height: 300px;
+
+}
+
+.texto_especialidades{
+    width: 100%;
+    color: black;
+    justify-content: center;
+    display: flex;
+    margin-top: 32px;
+}
+.text{
+    text-align: center;
+    border: 1px solid white;
+    width: 75%;
+    background: #919191a6;
+    font-size: 21px;
+    color: black;
+    font-style: oblique;
+}
+
+/* fin css de las imagenes sobrepuestas  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 769px){
+    .container{
+    display: block;
+    }
+    #btn-mas{
+        display: none;
+    }
+    .container{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+    .redes a, .icon-plus{
+        display: block;
+        text-decoration: none;
+        background-color:  #5c388c;
+        color:#fff;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50px;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+        transform: all 500ms ease;
+        transition: all 250ms ease-in-out 0s;
+        content: "";
+    }
+    
+    .redes a:hover{
+        background: #fff;
+        color:  #5c388c;
+    }
+    .redes a{
+        margin-bottom: -15px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    #btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+    
+    }
+    
+    .icon-plus{
+        cursor: pointer;
+        background:  #5c388c;
+        font-size: 23px;
+    
+    }
+    #btn-mas:checked ~ .btn-mas .icon-plus{
+        transform: rotate(130deg);
+        font-size: 25px;
+    }
+    .icon-plus-contactanos{
+        top: 88%;
+        color: rgb(255, 255, 255);
+        right: 60px;
+        margin: 0px;
+        padding: 0px 15px;
+        z-index: 1;
+        position: absolute;
+        font-size: 12px;
+        transform: translateY(-50%);
+        background:  #5c388c;
+        text-align: end;
+        transition: all 0.1s ease-out 0s;
+        font-family: unset;
+        line-height: initial;
+        white-space: nowrap;
+        border-radius: 3px;
+    }
+    #btn-mas:checked ~ .icon-plus-contactanos{
+        opacity: 1;
+        visibility: hidden;        
+    }
+    /*aqui comienza el responsive de slider*/
+
+    .container-all-slider{
+        height: 400px;
+    }
+    /*aqui termina el responsib del slider*/
+
+    /*aqui comienza el responsive del box description*/
+    .box_description{
+        box-sizing: border-box;
+    }
+    .acordeon{
+        width: 100%;
+    }
+    .acordeon__titulo{
+        text-align: center;
+    }
+    /*aqio termina el responsive del box description*/
+
+    /*aqui comienza el responsive de horario */
+    .horario{
+        font-size: 15px;
+    }
+
+    /*aqui termina el responsive de horario */
+    /*aqui comienza el responsive de especialista */
+
+
+    /*aqui termina el responsive de especialista */
+    .nosotros_desc p{
+        font-size: 14px;
+    }
+    .imagen-terapias{
+        width: 100%;
+    }
+    .imagen-terapias img{
+        width: 250px;
+    height: 200px;
+    }
+    .text{
+        width: 95%;
+    }
+    .text h3{
+        font-size: 25px;
+    }
+    .text p{
+        font-size: 20px;
+    }
+    .ocultar h3{
+        color: black;
+    }
+
+
+    .icon-plus-contactanos{
+        display: none;
+    }
+
+    .contacto_phone i{
+        margin: 0 0px 0px 0px;
+    }
+    .contacto_whatsapp i{
+        margin: 0 0px 0px 0px;
+    }
+
+
+
+}
+@media screen and (max-width: 425px){
+    .container-all-slider{
+        height: 220px;
+    }
+
+    .box_description{
+        display: block;
+    }
+
+    .box_nosotros_container h2{
+        left: 0;
+    }
+
+    .horario_de_atencion{
+        display: block;
+        
+    }
+
+    .horario_de_atencion_container{
+        text-align: center;
+        height: 200px;
+    }
+
+    .contacto_whatsapp{
+        margin-bottom: 10px;
+    }
+
+    .horario{
+        font-size: 16px;
+    }
+
+    .box_des_especialista{
+        font-size: 15px;
+        left: 75px;
+        position: relative;
+        width: 65%;
+    }
+
+    .box_especialista__desc{
+        display: block;
+    }
+
+
+    .box_nosotros{
+        display: block;
+        text-align: center;
+    }
+    .nosotros_desc{
+        width: 398px;
+        margin-left: 0px;
+    }
+
+    .footer_contacto_programa{
+        display: block;
+    }
+
+    .footer_contacto{
+        margin-bottom: 30px;
+    }
+
+    .todos_los_derechos_redes_sociales {
+        display: block;
+        text-align: center;
+    }
+
+    .redes_sociales_footer{
+        width: 100%;
+    }
+    .redes_sociales_footer ul{
+        display: flex;
+    justify-content: center;
+    }
+
+    .imagen-terapias{
+        margin-top: -17px;
+    }
+
+    .derechos h3{
+        font-size: 17px;
+    }
+
+    .icon-plus-contactanos{
+        top: 65%;
+    }
+
+    .imagen-terapias{
+        width: 100%;
+    }
+    .imagen-terapias img{
+        width: 216px;
+    }
+    .text{
+        width: 95%;
+    }
+    .text h3{
+        font-size: 25px;
+    }
+    .text p{
+        font-size: 18px;
+    }
+    .ocultar h3{
+        color: black;
+    }
+    #caja-constelaciones-familiares .text p {
+        font-size: 17px;
+    }
+
+
+    .icon-plus-contactanos{
+        display: none;
+    }
+
+    .redes_sociales_footer ul{
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 375px){
+    .container-all-slider{
+        height: 196px;
+    }
+
+    .box_nosotros_container h2{
+        width: 100%;
+    }
+
+    .nosotros_desc{
+        width: 360px;
+    }
+
+    .box_des_especialista{
+        left: 62px;
+    }
+
+    .imagen-terapias{
+        width: 100%;
+    }
+    .imagen-terapias img{
+        width: 216px;
+    }
+    .text{
+        width: 95%;
+    }
+    .text h3{
+        font-size: 25px;
+    }
+    .text p{
+            font-size: 18px;
+    }
+
+    .texto_especialidades{
+        margin-top: 14px;
+    }
+    .ocultar h3{
+        color: black;
+    }
+    #caja-constelaciones-familiares .text p {
+        font-size: 16px;
+    }
+
+    .icon-plus-contactanos{
+        display: none;
+    }
+}
+@media screen and (max-width: 320px){
+    .container-all-slider{
+        height: 176px;
+    }
+
+    .container-all-slider img{
+        height: 174px;
+    }
+    .nosotros_desc{
+        width: 304px;
+    }
+
+    .box_des_especialista{
+        width: 79%;
+        left: 27px;
+    }
+
+    .imagen-terapias{
+        width: 100%;
+    }
+    .imagen-terapias img{
+        width: 216px;
+    }
+    .text{
+        width: 95%;
+    }
+    .text h3{
+        font-size: 21px;
+    }
+    .text p{
+        font-size: 17px;
+    }
+    .ocultar h3{
+        color: black;
+    }
+    .icon-plus-contactanos{
+        display: none;
+    }
+
+    .texto_especialidades{
+        margin-top: 18px;
+    }
+
+    #caja-constelaciones-familiares .texto_especialidades {
+        margin-top: 4px;
+    }
+    #caja-constelaciones-familiares .text p {
+        font-size: 15px;
+    }
+
+
+
+
+
+
+}
+
+

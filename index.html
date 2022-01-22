@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <title>Koru</title>
+</head>
+<body >
+    <main>
+        <section>
+            <div class="logo">
+                <img src="img/logo.jpeg" alt="">
+            </div>
+        </section>
+        <section class="body">
+            <div class="container-all-slider">
+
+                <input id="1" type="redio" name="images-slider" hidden>
+                <input id="2" type="radio" name="images-slider" hidden>
+                <input id="3" type="radio" name="images-slider" hidden>
+                <input id="4" type="radio" name="images-slider" hidden>
+
+                <div class="slider">
+                    <div class="item-slider">
+                        <img src="img/slider1.jpeg" alt="">
+                    </div>
+                    <div class="item-slider">
+                        <img src="img/slider2.jpeg" alt="">
+                    </div>
+                    <div class="item-slider">
+                        <img src="img/slider3.jpeg" alt="">
+                    </div>
+                    <div class="item-slider">
+                        <img src="img/slider4.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="pagination">
+                        <label class="pagination-item" for="1">
+                            <img src="img/slider1.jpeg" alt="">
+                        </label>
+                        <label class="pagination-item" for="2">
+                            <img src="img/slider2.jpeg" alt="">
+                        </label>
+                        <label class="pagination-item" for="3">
+                            <img src="img/slider3.jpeg" alt="">
+                        </label>
+                        <label class="pagination-item" for="4">
+                            <img src="img/slider4.jpeg" alt="">
+                        </label>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="box_nosotros_container ">
+            <h2>Quienes Somos......</h2>
+            <div class="box_nosotros">
+                <img src="img/nosotros1.jpg" alt="">
+                <div class="nosotros_desc">
+                    <h3>Koru</h3>
+                    <p>Somos una empresa dedicada al bienestar y ala salud humana,conde nuestro principal enfoque es; entregar herramientas de diversas indoles para apoyar la evolución interna y salud integral de las personas.
+                        <br>
+                    Cremos consistentemente en la co-creacion, en la colaboracion y en que el trabajo activo en equipo, es la esencia del "ser" humano y que constantemente estamos en procesos evolutivos personales, como especie y sociedad.
+                    <br>
+                    Poe esto , nos encargamos de expandir , desde nuestro conocimientos, todo lo que sea posible para seguir siendo gente de bienestar, armonia y felicidad.
+                    <br>
+                    Dedicamos a realizar programas de bienestar integral (fisico, mental y emocinal) de servicios terapeuticos complemetarios.
+                    </p>
+                </div>
+            </div>
+       </div>
+        <div class="box_description_container">
+            <div class="box_description">
+                <div class="acordeon">
+                    <div class="acordeon_img">
+                        <img src="img/programas-empresas/empresa.jpeg" alt="">
+                    </div>
+                    <div class="acordeon__item">
+                        <input type="checkbox" name="acordeon" id="item1">
+                        <label for="item1" class="acordeon__titulo  "> Programa <br> Empresas</label>
+                        <div class="acordeon__contenido">
+                            <ul type="">
+                                <li><a onclick="mostrar_pausa_de_relajacion();">Pausas de Relajación</a></li>
+                                <li><a onclick="mostrar_pausas_activas();">Pausas Activas</a></li>
+                                <li><a onclick="mostrar_mindfulness();">Mind Fullness</a></li>
+                                <li><a onclick="mostrar_evaliacion_ergonomicas();">Evaluacion Ergonomía</a></li>
+                                <li><a onclick="mostrar_talleres_charlas();">Talleres & Charlas</a></li>
+                                <li><a onclick="mostrar_jornada_de_desarrollo_personal_laboral()">Jornada de Desarrollo<br>Personal y Laboral</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="acordeon">
+                    <div  class="acordeon_img">
+                        <img src="img/programas-educativos/educacion.jpeg" alt="">
+                    </div>
+                    <div class="acordeon__item">
+                        <input type="checkbox" name="acordeon" id="item2">
+                        <label for="item2" class="acordeon__titulo ">Programa<br>intituciones Educativas</label>
+                        <div class="acordeon__contenido">
+                            <ul>
+                                <li><a onclick="mostra_pausas_activas_educativas();">Pausas Activas</a></li>
+                                <li><a onclick="mostrar_risoterapia_educativas();">Risoterapia</a></li>
+                                <li><a onclick="mostrar_pausa_de_relajacion_educativas();">Pausas de Relajación</a></li>
+                                <li><a onclick="mostrar_masaje_en_silla_educativas();">Masajes en Sillas</a></li>
+                                <li><a onclick="mostra_prorgrama_integral_disminucion_del_estres_en_profesores_educativas();">Programa Integral Domindaciónn<br> del estres en Profesores</a></li>
+                                <li><a onclick="mostrar_talleres_charlas_educativas();">Talleres & Charlas</a></li>
+                                <li><a onclick="mostrar_jornada_de_desarrollo_personal_laboral_educativa();">Jornada de Desarrollo<br>Personal y Laboral</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="acordeon">
+                    <div class="acordeon_img">
+                        <img src="img/programa-personales/Personal.jpeg" alt="">
+                    </div>
+                    <div class="acordeon__item">
+                        <input type="checkbox" name="acordeon" id="item3">
+                        <label for="item3" class="acordeon__titulo ">Servicios<br>Personales</label>
+                        <div class="acordeon__contenido">   
+                            <ul>
+                                <h4>Terapia</h4>
+                                <li><a onclick="mostrar_terapia_biodescodificacion();">Biodescodificacion</a></li>
+                                <li><a onclick="mostrar_access_bars();">Access Bars</a></li>
+                                <li><a onclick="mostrar_flores_de_bach()">Flores de Bach</a></li>
+                                <h4>Consulta</h4>
+                                <li><a onclick="mostrar_canalizacion();" >Canalización</a></li>
+                                <li><a onclick="mostrar_constelaciones_familiares();">Constelaciones Familiares</a></li>
+                                <li><a onclick="mostrar_interpretacion_de_sueños();">Interpretación de Sueños</a></li>
+                                <h4>Masajes</h4>
+                                <li><a onclick="mostrar_relajacion();">Relajacion</a></li>
+                                <li><a onclick="mostrar_descontracturante();">Descontracturantes</a></li>
+                                <li><a onclick="mostrar_bruxismo_cefalea();">Bruxismo y Cefalea</a></li>
+                            </ul>             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horario_de_atencion_container">
+            <div class="horario_de_atencion">
+                <div class="horario">
+                    <h3>lunes a viernes</h3>
+                    <p>09:00  a  18:00 Hrs</p>
+                </div>
+                <div class="contacto_phone">
+                    <i class="icon-phone"></i>
+                    <a href="tel:+56965388001">+569 65388001</a>
+                </div>
+                <div class="contacto_whatsapp">
+                    <i class="icon-whatsapp"></i>
+                    <a href="https://wa.me/message/JBOFM2VOVMVON1" target="_blank">+569 64283370</a>
+                </div>
+                <div class="contacto_whatsapp">
+                    <i class="icon-gmail"></i>
+                    <a href="">info@koru.cl</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box_especialistas">
+            <h3>Especialista</h3>
+            <div class="box_especialista__desc">
+                <img src="img/especialista1.jpg" alt="">
+                <div class="box_des_especialista">
+                    <h4> Daniela Paz</h4>
+                    <p>Especialista en terapia Avanzada
+                        <br>
+                        Ergónomo, licenciada en;<br>
+                        Educación <br>
+                        Profesora de educación fisica,<br>
+                        Terapeuta de medicina complementaria,<br>
+                        Quiromasajista profecional.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <input type="checkbox" id="btn-mas">
+            <div class="redes">
+                <a class="icon-facebook" href="https://www.facebook.com/koru.centroholistico" target="_blank"></a>
+                <a class="icon-instagram" href="https://instagram.com/koru.terapias?utm_medium=copy_link" target="_blank"></a>
+                <a class="icon-whatsapp" href="https://wa.me/message/JBOFM2VOVMVON1" target="_blank"></a>
+                <a class="icon-gmail" href="mailto:cuenta@deemail.com" target="_blank"></a>
+                <a class="icon-phone" href="tel:+56965388001"></a>
+            </div>
+            <div class="btn-mas">
+                <label for="btn-mas" class="icon-plus"></label>
+            </div>
+            <div class="icon-plus-contactanos">
+                <label for="btn-mas"><p>Contáctanos</p></label>
+            </div>   
+        </div>
+        <div class="btn_social_flotante">
+        </div>
+    </main>
+<footer>
+    <div class="contactos_derechos_reservaos">
+        <div class="footer_contacto_programa">
+            <div class="footer_contacto">
+                <h3>Contactos</h3>
+                <ul>
+                    <li><a  href="https://wa.me/message/JBOFM2VOVMVON1" target="_blank">+569 64283370</a></li>
+                    <p></p> 
+                    <li><a href="tel:+56965388001">+569 65388001</a></li>
+                    <p></p> 
+                    <li><a href="mailto:cuenta@deemail.com" target="_blank">info@koru.cl </a></li>
+                    <p></p>
+                </ul>
+            </div>
+            <div class="footer_programa">
+                <h3>Especialidades</h3>
+                <ul>
+                    <li><a onclick="mostrar_access_bars();">Access Bars</a></li>
+                    <li></li>
+                    <p></p>
+                    <li><a onclick="mostrar_pausa_de_relajacion();">Pausas de Relajación</a></li>
+                    <p></p>
+                    <li><a onclick="mostrar_pausas_activas();">Pausas Activas</a></li>
+                    <p></p>
+                    <li><a onclick="mostrar_flores_de_bach()">Flores de Bach</a></li>
+                    <p></p>
+                </ul>
+            </div>
+        </div>
+        <div class="divisor_footer">
+            <p></p>
+        </div>
+        <div class="todos_los_derechos_redes_sociales">
+            <div class="derechos">
+                <h3>Centro Koru © 2020 /Todo los derechos reservados</h3>
+            </div>
+            <div class="redes_sociales_footer">
+                <ul>
+                    <li><a class="icon-facebook" href="https://www.facebook.com/koru.centroholistico" target="_blank"></a></li>
+                    <li><a class="icon-whatsapp" href="https://wa.me/message/JBOFM2VOVMVON1" target="_blank"> </a></li>
+                    <li><a class="icon-instagram" href="https://instagram.com/koru.terapias?utm_medium=copy_link" target="_blank"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--caja para mostrar imagen super puestas-->
+
+
+       <!-- Aqui empieza programa de empresas -->
+      
+    <div id="caja-pausa-de-relajacion"  class="imgenes_mostrar">
+        <div  class="ocultar">
+            <h3 onclick="ocultar_caja_pausa_de_relajacion();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-empresas/pausa-de-relajacion.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>PAUSAS DE RELAJACIÓN</h3>
+                <p>Es un tiempo "corto" entre tareas y labores, dónde se aplica metodología de mindfulness y relajación guiada.</p>
+            </div>
+        </div>     
+    </div>
+    <div id="caja-pausas-activas" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_caja_pausas_activas();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-empresas/pausas-activas.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>PAUSAS ACTIVAS</h3>
+                <p>Es un tiempo "corto" entre tareas y labores, dónde se realizan ejercicios físicos y de respiración que involucran movilidad articular, estiramientos y relajación muscular.</p>
+            </div>
+        </div> 
+    </div>
+    <div id="caja-mindfulness" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_mindfulness();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-empresas/mind-fullnes.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>MINDFULNESS</h3>
+                <p>Es una técnica de meditación que consiste en observar la realidad en el momento presente, sin intenciones de juzgar y con plena apertura y aceptación. Atención plena.</p>
+            </div>
+        </div> 
+    </div>  
+    <div id="caja-evaliacion-ergonomicas" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_evaliacion_ergonomicas();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-empresas/evaluacion-ergonomia.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>EVALUACIÓN ERGONOMÍA</h3>
+                <p>A través de diversas herramientas ergonómicas (fórmulas ej: REBA, RULA, ROSA y encuestas, entre otros) se evalúa el puesto de trabajo para encontrar las posibles afecciones que podrían provocar al trabajador en su salud y se entregan opciones para su mejoramiento.</p>
+            </div>
+        </div> 
+    </div>   
+    <div id="caja-talleres-charlas" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_talleres_charlas();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-empresas/talleres&charlas.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>TALLERES Y CHARLAS</h3>
+                <p>Actividades de carácter grupal y masivo, de participación activa, dónde se trabajan temas relevantes para mejorar la calidad de vida y de trabajo.</p>
+            </div>
+        </div> 
+    </div>   
+    <div id="caja-jornada-de-desarrollo-personal-laboral" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_jornada_de_desarrollo_personal_laboral();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-empresas/jornada-desarrollo-personal-laboral.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>JORNADAS DE DESARROLLO PERSONAL Y LABORAL</h3>
+                <p>Se realizan diversas actividades con el enfoque que necesite el grupo de trabajadores y la institución para un mejor desempeño en las tareas de su puesto de trabajo.Estas se desarrollan en un espacio que brinda las condiciones necesarias para la reflexión.</p>
+            </div>
+        </div> 
+
+    </div>
+    <!-- Aqui termina programa de empresas -->
+    <!-- Aqui comienza Programa intituciones Educativas -->
+    <div id="caja-pausa-de-relajacion-educativas"  class="imgenes_mostrar">
+        <div  class="ocultar">
+            <h3 onclick="ocultar_pausa_de_relajacion_educativas();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-educativos/pausa-de-relajacion.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>PAUSAS DE RELAJACIÓN</h3>
+                <p>Es un tiempo "corto" entre tareas y labores, dónde se aplica metodología de mindfulness y relajación guiada.</p>
+            </div>
+        </div>     
+    </div>
+    <div id="caja-pausas-activas-educativas" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_pausa_activas_educativas();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-educativos/pausas-activas.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>PAUSAS ACTIVAS</h3>
+                <p>Es un tiempo "corto" entre tareas y labores, dónde se realizan ejercicios físicos y de respiración que involucran movilidad articular, estiramientos y relajación muscular.</p>
+            </div>
+        </div> 
+    </div>
+    <div id="caja-risoterapia-educativa" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_risoterapia_educativa();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-educativos/risoterapia.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>RISOTERAPIA</h3>
+                <p>Es una técnica psicoterapéutica que produce beneficios mentales y emocionales, a través de la risa.</p>
+            </div>
+        </div> 
+    </div>
+
+    <div id="caja-masaje-en-silla-educativa" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_masaje_en_silla_educativas();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-educativos/masaje-en-silla.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>MASAJE EN SILLA</h3>
+                <p>Masaje express de la parte superior del cuerpo, sobre prendas de vestir, que se realiza en una silla ergonómica.</p>
+            </div>
+        </div> 
+    </div>
+    <div id="caja-prorgrama-integral-disminucion-del-estres-en-profesores-educativas"  class="imgenes_mostrar">
+        <div  class="ocultar">
+            <h3 onclick="ocultar_prorgrama_integral_disminucion_del_estres_en_profesores_educativas();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-educativos/estres-para-profesores.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>PROGRAMA INTEGRAL DISMINUCIÓN DEL ESTRÉS EN PROFESORES</h3>
+                <p>Es un tiempo "corto" entre tareas y labores, dónde se aplica metodología de mindfulness y relajación guiada.</p>
+            </div>
+        </div>     
+    </div>
+    <div id="caja-talleres-charlas-educativas" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_talleres_charlas_educativas();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-educativos/talleres&charlas.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>TALLERES Y CHARLAS</h3>
+                <p>Actividades de carácter grupal y masivo, de participación activa, dónde se trabajan temas relevantes para mejorar la calidad de vida y de trabajo.</p>
+            </div>
+        </div> 
+    </div> 
+    <div id="caja-jornada-de-desarrollo-personal-laboral-educativa" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_jornada_de_desarrollo_personal_laboral_educativa();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programas-educativos/jornada-desarrollo-personal-laboral.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>JORNADAS DE DESARROLLO PERSONAL Y LABORAL</h3>
+                <p>Se realizan diversas actividades con el enfoque que necesite el grupo de trabajadores y la institución para un mejor desempeño en las tareas de su puesto de trabajo.Estas se desarrollan en un espacio que brinda las condiciones necesarias para la reflexión.</p>
+            </div>
+        </div> 
+    </div> 
+    <!-- Aqui termina Programa intituciones Educativas -->
+
+    <!-- Aqui comienza Programa personales -->
+
+    <div id="caja-terapia-biodescodificacion" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_terapia_biodescodificacion();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programa-personales/biodescodificacio.jpg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>BIODESCODIFICACIÓN</h3>
+                <p>La biodescodificación es una propuesta de la medicina complementaria que propone encontrar l origen metafisicode las enfermedades y su significado emosional, para buscar a partir de allí la forma de sanar.
+                <br>
+                <br>
+                Duración: 60 minutos
+                 </p>
+            </div>
+        </div> 
+    </div> 
+
+    <div id="caja-access-bars" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_access_bars();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programa-personales/access-bars.jpg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>ACCESS BARS</h3>
+                <p>Access Bars es un proceso que activa 32 barras energeticas situadas en la cabeza. Cada una de estas barras contiene información sobre determinadas áreas de la vida (dinero, control, creatividad, poder, sexualidad, cuerpo, envejecimiento, alegria, tristeza, etc..)
+                <br>
+                Esta terapia busca transformar creencias y patrones limitantes, para mejorar la forma de accionar en la vida .
+                <br>
+                Duración: 40 minutos
+                 </p>
+            </div>
+        </div> 
+    </div> 
+
+    <div id="caja-flores-de-bach" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_flores_de_bach();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programa-personales/curso-flores-bach.jpg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>FLORES DE BACH</h3>
+                <p>Es una terapia complementaria, reconocida desde 1976 por la OMS(Organización Mundial de la Salud), y trabaja a través de lla medicina vibracional, ayudando a regular las emociones para el bienestar, eqiolibrio emocional, fisico y mental. Las Flores de Bach son una serie de esencias naturales utilizadas para tratar miedos, soledad, desespereción, estrés, deprecion y obseciones entre otras. Fueron descubiertas por Edwuard Bach entre los años 1926 y 1934 
+                <br>
+                Duración: 40 minutos
+                 </p>
+            </div>
+        </div> 
+    </div> 
+
+
+    <div id="caja-canalizacion" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_canalizacion();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programa-personales/canalizacio.jpg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>CANALIZACION</h3>
+                <p>La Canalización en un método terapéutico que busca reconectarnos con nuestro poder espiritual. Donde se canaliza la informacion espiritual que proviene de otras dimenciones. Tiene el objetivo de responder a las dudas y encontrar las soluciones  que estamos buscando.
+                <br>
+                Tmbien Existe la posibilidad de conectar con seres queridos que ya hayan partido de este plano.
+                <br>
+                Duración: 60 minutos
+                 </p>
+            </div>
+        </div> 
+    </div> 
+
+
+    <div id="caja-constelaciones-familiares" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_constelaciones_familiares();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programa-personales/constelaciones-familiare.jpg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>CONSTELACIONES FAMILIARES</h3>
+                <p>Las Constelaiones Familiares, tienen como objetivo que las personas perciban las implicaciones dentro de su familia para que, de este modo, sele pueda brindar una solución a la problemática que ha planteado. Para ello se le ayuda a que se coloque en el lugar adecuado dentro del sistema que forma su familia (contelación).
+                <br>
+                <small>GRUPAL:</small> Se realizan previa invitación, con otras personas que deben constelar y que no formen parte del mismo sistema familiar.
+                <br>
+                <small>INDIVIDUAL:</small> Se realizan de forma individual constelando a través de figuras de juguete, "representativas".
+                Duración: 60 a 90 minutos
+                 </p>
+            </div>
+        </div> 
+    </div> 
+
+
+    <div id="caja-interpretacion-de-sueños" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_interpretacion_de_sueños();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/slider4.jpeg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>INTERPRETACIÓN DE SUEÑOS</h3>
+                <p>La interpretación de sueños es el arte y la técnica de asignar significados a los diversos componentes, elementos e imágines que aparecen en los sueños.
+                <br>
+                Se trata de un práctica humana milenaria, de la que se conservan registros escritos de mas de 3800 años de antigüedad. Freud plantea que los sueños son una realización alucinatoria de deseos y por concecuencia, una vía privilegiada de acceso al inconciente, mediantes el empleo del método interpretativo
+                <br>
+                Duración: 40 minutos
+                 </p>
+            </div>
+        </div> 
+    </div> 
+    
+    <div id="caja-relajacion" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_relajacion();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programa-personales/interpretacion-de-sueños.jpg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>RELAJACIÓN</h3>
+                <p>Consiste en la realización de maniobras superficiales, en la que la intencidad de la preción es suave y el ritmo lento y reiterativo, de manera que al recibir un contacto repetido y constante, se pierde la sensación del dolor y los musculos se relajan. Es realizado en espalda, pienas, pies, brazos, manos, hombros, cuello, cabeza y cara.
+                <br>
+                Duración: 60 a 90 minutos.
+                 </p>
+            </div>
+        </div> 
+    </div> 
+
+    <div id="caja-bruxismo-cefalea" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_bruxismo_cefalea();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programa-personales/bruxismo-cefalea.jpg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>BRUXISMO & CEFALEA</h3>
+                <p>Consiste en la realización de maniobras especificas para descontracturar y relajar la musculatura de la mandibula, cuello y cabeza que producen el bruxismo y el dolor de cabeza(cefalea).
+                <br>
+                Duración: 40 minutos.
+                 </p>
+            </div>
+        </div> 
+    </div> 
+    
+    <div id="caja-relajacion" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_relajacion();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programa-personales/relajacion.jpg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>RELAJACIÓN</h3>
+                <p>Consiste en la realización de maniobras superficiales, en la que la intencidad de la preción es suave y el ritmo lento y reiterativo, de manera que al recibir un contacto repetido y constante, se pierde la sensación del dolor y los musculos se relajan. Es realizado en espalda, pienas, pies, brazos, manos, hombros, cuello, cabeza y cara.
+                <br>
+                Duración: 60 a 90 minutos.
+                 </p>
+            </div>
+        </div> 
+    </div> 
+
+    <div id="caja-descontracturante" class="imgenes_mostrar">
+        <div class="ocultar">
+            <h3 onclick="ocultar_descontracturante();">Cerrar</h3>
+        </div>
+        <div class="imagen-terapias">
+            <img  src="img/programa-personales/descontracturantes.jpg" alt="">
+        </div>
+        <div class="texto_especialidades">
+            <div class="text">
+                <h3>DESCONTRACTURANTE</h3>
+                <p>Consiste en la realización de maniobras especificas que se utilizan para relajar la musculatura y disolver las contracturas que se producen por el estrés, las malas posturas la falta de descanzo o una vida demasiado sedentaria.
+                <br>
+                Duración: 60 minutos.
+                 </p>
+            </div>
+        </div> 
+    </div> 
+    <!-- Aqui termina Programa personales -->
+
+
+    <script src="js/style.js"></script>
+</body>
+</html>
